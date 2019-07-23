@@ -10,9 +10,9 @@
     width: 70px;
     height: 70px;
 }
-.ladoA{
+.ladoA {
     transform: scaleX(1);
 }
-.ladoB{
+.ladoB {
     transform: scaleX(-1);
 }
