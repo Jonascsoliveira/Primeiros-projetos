@@ -24,6 +24,7 @@ body {
     position: absolute;
     width: 190px;
     padding: 10px;
+    left: 0px;
     bottom: 0px;
     border-color: solid 1px #fff;
     background-color: #fff;
