@@ -1,6 +1,7 @@
 //decalração de variáveis para serem usadas na função logo abaixo.
 var altura = 0;
 var largura = 0;
+var vidas = 1;
 
 //Função para informar o tamanho da tela para redefinir a tela do jogo se necessário.
 function ajustaTamanhoPalcoJogo() {
@@ -15,6 +16,13 @@ ajustaTamanhoPalcoJogo();
 function posicaoRandomica(){
     if (document.getElementById('mosquito')) {
         document.getElementById('mosquito').remove();
+    if (vidas > 3) {
+        window.location.href = 'fim_de_jogo.html';
+    } else{    
+        //fazendo a troca de corações de vida 'cheio por vazio'
+        document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png";
+        vidas ++;
+    }
     }
 
     //criação da posição randomica do mosquito 
@@ -36,6 +44,9 @@ function posicaoRandomica(){
     mosquito.style.top = posicaoY + 'px';
     mosquito.style.position = 'absolute';
     mosquito.id = 'mosquito';
+    mosquito.onclick = function(){
+        this.remove();
+    }
 
     document.body.appendChild(mosquito);
 
