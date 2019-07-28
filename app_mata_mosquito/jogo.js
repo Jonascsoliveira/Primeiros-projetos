@@ -2,6 +2,7 @@
 var altura = 0;
 var largura = 0;
 var vidas = 1;
+var tempo = 10
 
 //Função para informar o tamanho da tela para redefinir a tela do jogo se necessário.
 function ajustaTamanhoPalcoJogo() {
@@ -12,6 +13,17 @@ function ajustaTamanhoPalcoJogo() {
 
 ajustaTamanhoPalcoJogo();
 
+
+
+var cronometro = setInterval(function(){
+
+    tempo -=1;
+    if(tempo < 0){
+
+    }else{
+    document.getElementById('cronometro').innerHTML = tempo;
+    },1000)
+}
 
 function posicaoRandomica(){
     if (document.getElementById('mosquito')) {
