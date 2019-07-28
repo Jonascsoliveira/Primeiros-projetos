@@ -3,6 +3,19 @@ var altura = 0;
 var largura = 0;
 var vidas = 1;
 var tempo = 15;
+var criaMosquitoTempo = 1500;
+var nivel = window.location.search;
+
+//Utilizando método replace onde primeiro seleciona o q se quer substituir, em seguida o que irá substituir
+nivel = nivel.replace('?', '');
+
+if (nivel === 'normal'){
+    criaMosquitoTempo = 1500;
+}else if (nivel === 'dificil') {
+    criaMosquitoTempo = 1000;
+}else if (nivel === 'chucknorris') {
+    criaMosquitoTempo = 750;
+}
 
 //Função para informar o tamanho da tela para redefinir a tela do jogo se necessário.
 function ajustaTamanhoPalcoJogo() {
